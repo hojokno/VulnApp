@@ -94,6 +94,21 @@ The vulnerable SQL query can return a user record without requiring the correct 
 
 Repeat the same test in **Secure** mode to observe how parameterized queries prevent the injection from bypassing authentication.
 
+## Burp Suite Testing
+
+This application was also developed to practice web application testing using Burp Suite.
+
+Two text files containing fictional usernames and passwords are provided for testing with Burp Suite Intruder.
+
+The wordlists can be loaded into Intruder using the Cluster Bomb attack type to test combinations of usernames and passwords against the application's local login form.
+
+The application supports two testing scenarios:
+
+1. **SQL Injection:** Compare vulnerable SQL query construction against secure parameterized queries.
+2. **Credential Testing:** Use Burp Suite Intruder to automate login attempts with predefined test credentials.
+
+All testing is intended to be performed against the locally hosted Flask application at `http://127.0.0.1:5000`.
+
 ## Security Notes
 
 This application is intentionally vulnerable and was developed strictly for educational purposes.
